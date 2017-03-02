@@ -30,7 +30,13 @@
             <br/>
             <hr/>
             <br/>
-            {{ request.session.results }}
+
+            {% for result in request.session.results %}
+            <div>
+                {{ result }}
+            </div>
+            {% endfor %}
+
         {% endif %}
     </div>
 
