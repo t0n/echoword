@@ -1,0 +1,39 @@
+
+{% load i18n %}
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Words</title>
+
+
+    <meta http-equiv="Content-Type" content="text/html" charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+</head>
+
+<body>
+
+    <h1>Words</h1>
+
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+        <button type="submit">Go</button>
+        </form>
+
+        {% if request.session.results %}
+            <br/>
+            <hr/>
+            <br/>
+            {{ request.session.results }}
+        {% endif %}
+    </div>
+
+</body>
+
+</html>
