@@ -33,7 +33,7 @@
 
             {% for result in request.session.results %}
             <div>
-                {{ result }}
+                {{ result|safe }}
             </div>
             {% endfor %}
 

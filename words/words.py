@@ -48,7 +48,7 @@ class Word(object):
             num_char_count = i // letters
             ind = chr(97 + int(num_char_code)) * (num_char_count+1)
             # print('sr = ' + ind + '. ' + sorted_result[i][0] + ' ' + sorted_result[i][1])
-            indexed_results.append(ind + '. ' + sorted_result[i][0] + ' ' + sorted_result[i][1])
+            indexed_results.append(ind + '. ' + sorted_result[i][0] + ('&nbsp;'*10) + sorted_result[i][1])
 
         result = indexed_results
 
